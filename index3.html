@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .property-details {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-image {
+            max-width: 100%;
+            height: auto;
+            width: 400px;
+        }
+
+        .property-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .property-description {
+            margin-top: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            height: auto;
+        }
+        #vr{
+            width: 100%;
+            height: 50px;
+            color: rgb(254, 252, 252);
+
+            background-color: rgb(97, 251, 97);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Property Information</h1>
+    </header>
+    <div class="container">
+        <div class="property-details">
+            <h2>Property Name</h2>
+            <img class="property-image" src="./assets/Img/1.png" alt="Property Image">
+            <h3>Property Images</h3>
+            <div class="image-gallery">
+                <img src="./assets/Img/1.png" alt="Image 1" class="image-preview">
+                <img src="./assets/Img/1.png" alt="Image 2" class="image-preview">
+                <img src="./assets/Img/1.png" alt="Image 3" class="image-preview">
+                <img src="./assets/Img/1.png" alt="Image 4" class="image-preview">
+
+                
+
+                
+                
+                 <!-- Add more images as needed -->
+                </div>
+
+                <!-- GET  VIRTUAL TOUR-->
+                <button id = "vr">Virtual Tour</button>
+
+                
+                <p class="property-price">Rs25,00,000</p>
+            <p class="property-description">
+                This beautiful property is located in a prime location and offers stunning views. It features 3 bedrooms, 2 bathrooms, a spacious living room, and a well-manicured garden.
+            </p>
+            <p class="property-features">
+                <strong>Features:</strong>
+                <ul>
+                    <li>3 Bedrooms</li>
+                    <li>2 Bathrooms</li>
+                    <li>Spacious Living Room</li>
+                    <li>Garden</li>
+                    <li>Garage</li>
+                </ul>
+            </p>
+
+            <!-- Image Gallery Section -->
+            
+        </div>
+    </div>
+
+    <script>
+        const imagePreviews = document.querySelectorAll('.image-preview');
+        const propertyImage = document.querySelector('.property-image');
+
+        imagePreviews.forEach((preview) => {
+            preview.addEventListener('click', () => {
+                propertyImage.src = preview.src;
+            });
+        });
+    </script>
+</body>
+</html>
